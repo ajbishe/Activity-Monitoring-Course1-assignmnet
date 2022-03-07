@@ -3,8 +3,8 @@
  author: "Myself"
  date: "07/03/2022"
  output:
-  html_document: default
   pdf_document: default
+  html_document: default
 ---
 ## Peer-graded Assignment: Course Project 1
 ### Commit containing full submission
@@ -129,11 +129,7 @@ daily_pattern<-activity4 %>%
 library(lattice)
 
 with(daily_pattern, 
-     xyplot(daily_steps ~ interval  | day, type = "p", colors="blue", pch=20,      
+     xyplot(daily_steps ~ interval  | day, type = "l", colors="blue", pch=20,      
             main = "Activity pattern during weekday vs weekend",
             xlab = "Five minutes daily intervals", ylab = "Average number of steps"))
 ```
-
-
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
